@@ -1,5 +1,6 @@
 # Willberries - Online shop
-## Technologies:
+## By Anastasia Karolik
+### Technologies:
 - HTML
 - CSS
 - JS
