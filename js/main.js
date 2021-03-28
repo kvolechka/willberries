@@ -293,7 +293,7 @@ modalForm.addEventListener('submit', event => {
 	event.preventDefault();
 	const formData = new FormData(modalForm);
 
-	if (!validForm(formData) && getCountCartGoods()) {
+	if (!validForm(formData) && cart.getCountCartGoods()) {
 		formData.append('cart', JSON.stringify(cart.cartGoods))
 
 		postData(formData)
@@ -312,10 +312,10 @@ modalForm.addEventListener('submit', event => {
 			cart.clearCart();
 		});
 } else {
-	if (getCountCartGoods()) {
+	if (!cart.getCountCartGoods()) {
 		alert('Добавьте товар в корзину!');
 	}
-	if (validForm(formData)) {
+	if (!validForm(formData)) {
 		alert('Заполните все поля правильно!');
 	}
 }
